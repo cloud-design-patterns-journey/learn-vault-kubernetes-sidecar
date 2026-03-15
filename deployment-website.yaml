@@ -19,6 +19,7 @@ spec:
           {{- with secret "internal/data/database/config" -}}
           postgresql://{{ .Data.data.username }}:{{ .Data.data.password }}@postgres:5432/wizard
           {{- end -}}
+        vault.hashicorp.com/agent-image: "registry.connect.redhat.com/hashicorp/vault:1.16.1-ubi"
       labels:
         app: website
     spec:
