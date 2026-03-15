@@ -1,4 +1,7 @@
 spec:
   template:
+    metadata:
+      annotations:
+        vault.hashicorp.com/role: 'internal-app'
     spec:
       serviceAccountName: internal-app
